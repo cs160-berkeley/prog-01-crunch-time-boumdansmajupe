@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.tiffanielo.cs160prog01.CalorieCounter"
+    tools:showIn="@layout/activity_calorie_counter">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calorie Counter
+        "
+        android:id="@+id/textView" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/UserInputReps"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_toEndOf="@+id/textViewReps" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Reps/Mins:  "
+        android:id="@+id/textViewReps"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Sit Ups:  "
+        android:id="@+id/SitUps"
+        android:layout_marginTop="53dp"
+        android:layout_below="@+id/Exercise"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calories"
+        android:id="@+id/Convert"
+        android:layout_marginTop="33dp"
+        android:layout_below="@+id/Jogging"
+        android:layout_alignEnd="@+id/PushUps" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/SitUpsResult"
+        android:layout_above="@+id/PushUps"
+        android:layout_toEndOf="@+id/SitUps" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Push Ups:  "
+        android:id="@+id/PushUps"
+        android:layout_below="@+id/SitUps"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="35dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Jumping Jacks:  "
+        android:id="@+id/JJ"
+        android:layout_marginTop="33dp"
+        android:layout_below="@+id/PushUps"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Jogging:  "
+        android:id="@+id/Jogging"
+        android:layout_below="@+id/JJ"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="46dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/JoggingResult"
+        android:layout_alignTop="@+id/Jogging"
+        android:layout_alignBottom="@+id/Jogging"
+        android:layout_toEndOf="@+id/Jogging" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/JumpingJackResult"
+        android:layout_alignBottom="@+id/JJ"
+        android:layout_toEndOf="@+id/JJ" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/PushUpResult"
+        android:layout_alignTop="@+id/PushUps"
+        android:layout_toEndOf="@+id/PushUps" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Exercise:  "
+        android:id="@+id/Exercise"
+        android:layout_below="@+id/UserInputReps"
+        android:layout_toStartOf="@+id/JoggingResult"
+        android:layout_marginTop="38dp"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convert to Exercises"
+        android:id="@+id/ConvExer"
+        android:layout_alignTop="@+id/Convert"
+        android:layout_alignStart="@+id/PushUpResult" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/UserInputExer"
+        android:layout_alignStart="@+id/JoggingResult"
+        android:layout_alignBottom="@+id/Exercise"
+        android:layout_below="@+id/UserInputReps"
+        android:layout_alignEnd="@+id/UserInputReps" />
+
+</RelativeLayout>
